@@ -250,12 +250,6 @@ module.exports = async(conn, msg, m, setting) => {
 		conn.sendReadReceipt(from, sender, [msg.key.id])
 		conn.sendPresenceUpdate('available', from)
 		
-		// Auto Registrasi
-		if (isCmd && !isUser) {
-		  pendaftar.push(sender)
-		  fs.writeFileSync('./database/user.json', JSON.stringify(pendaftar, null, 2))
-		}
-		
 		// Premium
 		_prem.expiredCheck(conn, premium)
 
