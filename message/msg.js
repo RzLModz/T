@@ -1058,7 +1058,7 @@ Cek Pintar : ${pinter}%
 Menyukai : ${gai}
   `
 var but = [{buttonId: '/y', buttonText: { displayText: 'Cocok' }, type: 1 }, {buttonId: '/n', buttonText: { displayText: 'Gak Cocok' }, type: 1 }]
-					conn.sendMessage(from, { caption: cek, image: { url: `https://textpro.me/images/user_image/2022/01/61d195901d4c3.jpg` }, buttons: but, footer: '© JojoBot' }, { quoted: msg })
+					conn.sendMessage(from, { caption: cek, image: { url: `https://telegra.ph/file/a48660964fc598016dc71.png` }, buttons: but, footer: '© JojoBot' }, { quoted: msg })
 				    limitAdd(sender, limit)
 				    break
 case prefix+'y':
