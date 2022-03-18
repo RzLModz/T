@@ -28,12 +28,20 @@ const speed = require("performance-now");
 const request = require("request");
 const ms = require("parse-ms");
 
-//Apikey melcanz, Search aja melcanz.aja
+//Apikey melcanz, Search aja melcanz.com
 //Apikey Anto = hardianto
 //Apikey jojo = Syaa
 const apikey = "melcantik"
 const keyanto = "hardianto"
 const jojoapi = "Syaa"
+
+// Setting Donasi
+const gopay = "0882-1329-2687"
+const ovo = "0813-1994-4917"
+const dana = "0813-1994-4917"
+const pulsa = "0813-1994-4917"
+const pulsa2 = "0882-1329-2687"
+const ig = "sofunsyabi.jpg"
 
 // Exif
 const Exif = require("../lib/exif")
@@ -226,9 +234,10 @@ module.exports = async(conn, msg, m, setting) => {
 		//{ callButton: { displayText: `Call Owner!`, phoneNumber: `+6281319944917` } },
 		const buttonsDefault = [
 			{ urlButton: { displayText: `GRUP JOJO-BOT`, url : `https://chat.whatsapp.com/HECLovHbCI6LVVH4Q8FN2C` } },
-			{ urlButton: { displayText: `Thanks To`, url : `ThanksTo\n- Riyan\n- Arasya` } },
+			{ urlButton: { displayText: `Youtube Channel`, url : `https://youtube.com/channel/UCZzt-Qw0zTYc8UP-LL2G5fA` } },
 			{ quickReplyButton: { displayText: `💰 Donasi`, id: `${prefix}donate` } },
 			{ quickReplyButton: { displayText: `Pemilik Bot`, id: `${prefix}owner` } },
+			{ quickReplyButton: { displayText: `Info Bot`, id: `${prefix}infobot` } },
 		]
 		const button5 = [
 			{ callButton: { displayText: `Number Owner`, phoneNumber: `0813-1994-4917` } },
@@ -343,15 +352,17 @@ case prefix+'donasi':
 		]
 var teks = `  │
   ├─ ❏ GOPAY
-  ├─ ❏ 088213292687
+  ├─ ❏ ${gopay}
   ├─ ❏ OVO
-  ├─ ❏ 088213292687
+  ├─ ❏ ${ovo}
+  ├─ ❏ DANA
+  ├─ ❏ ${dana}
   ├─ ❏ PULSA
-  ├─ ❏ 081319944917
+  ├─ ❏ ${pulsa}
   ├─ ❏ PULSA2
-  ├─ ❏ 088213292687
+  ├─ ❏ ${pulsa2}
   ├─ ❏ INSTAGRAM
-  └─ ❏ https://www.instagram.com/sofunsyabi.jpg
+  └─ ❏ https://www.instagram.com/${ig}
   
   Donasi Untuk Upgrade Ke Fitur Premium
   Note : Donasi Seikhlasnya`
@@ -387,6 +398,29 @@ case prefix+'groupjojo':
                             let latensi = speed() - timestamp
                             textImg(`${latensi.toFixed(4)} Second`)
 		            break
+case prefix+'infobot':
+  case prefix+'inforobot':
+    case prefix+'info':
+      var caption = `*[ INFO ROBOT JOJO ]*
+
+*Nama Bot :* Jojo
+*Name Owner :* Arasya
+*Nomor Bot :* wa.me/6288213292687
+*Nomor Owner :* wa.me/6281319944917
+*Engine :* NodeJs
+*Status :* Aktif
+*Aktif Selama :* ${runtime(process.uptime())}
+
+===================
+Thanks To
+- Riyan
+- Arasya
+- Amel
+- Hardianto
+- Febri`
+
+conn.sendMessage(from, {caption: caption, image: {url: `https://telegra.ph/file/7b927d601b6c7496d01ef.jpg`}}, {quoted: msg})
+break
 			/*case prefix+'donate':
 			case prefix+'donasi':
 			    reply(`◪ DONASI
@@ -1061,6 +1095,9 @@ case prefix+'y':
   break
 case prefix+'n':
   reply("Yah Maaf Ya kak:(")
+  break
+case prefix+'sc':
+  reply("https://github.com/GetSya/JOJO-MD")
   break
 case prefix+'apakah':
   if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
