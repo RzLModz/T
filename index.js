@@ -24,14 +24,14 @@ const { state, saveState } = useSingleFileAuthState(session)
 
 function title() {
       console.clear()
-	  console.log(chalk.bold.green(figlet.textSync('WaBot MD', {
+	  console.log(chalk.bold.green(figlet.textSync('JojoBot MD', {
 		font: 'Standard',
 		horizontalLayout: 'default',
 		verticalLayout: 'default',
 		width: 80,
 		whitespaceBreak: false
 	})))
-	console.log(chalk.yellow(`\n                        ${chalk.yellow('[ Created By Irfan ]')}\n\n${chalk.red('Chitanda Eru Bot')} : ${chalk.white('WhatsApp Bot Multi Device')}\n${chalk.red('Follow Insta Dev')} : ${chalk.white('@yannnnn.zz_')}\n${chalk.red('Message Me On WhatsApp')} : ${chalk.white('+62 857-9145-8996')}\n${chalk.red('Donate')} : ${chalk.white('085791458996 ( Gopay/Pulsa )')}\n`))
+	console.log(chalk.yellow(`\n                        ${chalk.yellow('[ Created By Irfan && Arasya ]')}\n\n${chalk.red('Jojo Bot')} : ${chalk.white('WhatsApp Bot Multi Device')}\n${chalk.red('Follow Insta Dev')} : ${chalk.white('@sofunsyabi.jpg')}\n${chalk.red('Message Me On WhatsApp')} : ${chalk.white('+62 813-1994-4917')}\n${chalk.red('Donate')} : ${chalk.white('0882-1329-2687( Gopay/Ovo/Dana )')}\n`))
 }
 
 /**
@@ -78,7 +78,7 @@ const connectToWhatsApp = async () => {
 	nocache('./message/msg', module => console.log(chalk.greenBright('[ WHATSAPP BOT ]  ') + time + chalk.cyanBright(` "${module}" Telah diupdate!`)))
 	
 	conn.multi = true
-	conn.nopref = false
+	conn.nopref = true
 	conn.prefa = 'anjing'
 	conn.ev.on('messages.upsert', async m => {
 		if (!m.messages) return;
