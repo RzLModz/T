@@ -112,6 +112,19 @@ exports.allmenu = (sender, prefix, pushname, isOwner, isPremium, balance, limit,
   ≻ ${prefix}christmas <Text>
   ≻ ${prefix}logowolf <Text>
   ≻ ${prefix}logowolf2 <Text>
+  ≻ ${prefix}thunder <Text>
+  
+  *( 🍻 )  Maker From Image*
+  ≻ ${prefix}maker1 <Text>
+  ≻ ${prefix}maker2 <Text>
+  ≻ ${prefix}maker3 <Text>
+  ≻ ${prefix}maker4 <Text>
+  ≻ ${prefix}maker5 <Text>
+  ≻ ${prefix}maker6 <Text>
+  ≻ ${prefix}maker7 <Text>
+  ≻ ${prefix}maker8 <Text>
+  ≻ ${prefix}maker9 <Text>
+  ≻ ${prefix}maker10 <Text>
   
   *( 🪀 )  Menu Lain Nya*
   ≻ ${prefix}shortlink <Link>
@@ -120,6 +133,8 @@ exports.allmenu = (sender, prefix, pushname, isOwner, isPremium, balance, limit,
   ≻ ${prefix}sshpfull <Link>
   ≻ ${prefix}kbbi <Kata>
   ≻ ${prefix}faktaunik
+  ≻ ${prefix}ppcp
+  ≻ ${prefix}kalkulator
   ≻ ${prefix}darkjokes
   ≻ ${prefix}covid19
   ≻ ${prefix}cerpen

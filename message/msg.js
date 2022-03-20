@@ -34,6 +34,7 @@ const ms = require("parse-ms");
 const apikey = "melcantik"
 const keyanto = "hardianto"
 const jojoapi = "Syaa"
+const ikiapi = "FuckBitch"
 
 // Setting Donasi
 const gopay = "0882-1329-2687"
@@ -391,7 +392,7 @@ _Yakin kamu mau daftar ke premium?_
 			    reply(runtime(process.uptime()))
 			    break
 case prefix+'groupjojo':
-  reply("Group 1\n\nhttps://chat.whatsapp.com/Chvc5ptPYDgJcxJxp5zbIc\nGroup 2\n\nhttps://chat.whatsapp.com/DqM488U5RvmGpsbTMfDbMv\nCobain Bot Telegram Jojo yuk!\nhttps://t.me/docsjojo_bot?start=help")
+  reply("Group 1\n\nhttps://chat.whatsapp.com/HECLovHbCI6LVVH4Q8FN2C\nGroup 2\n\nhttps://chat.whatsapp.com/DqM488U5RvmGpsbTMfDbMv\nCobain Bot Telegram Jojo yuk!\nhttps://t.me/docsjojo_bot?start=help")
   break
 			case prefix+'speed':
 			    let timestamp = speed();
@@ -1939,26 +1940,35 @@ case prefix+'leaves':
   break
 case prefix+'pornhub':
   if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  reply("Tunggu Sebentar Sedang Membuat Makernya Sekitar 1 Menit Kurang")
   var data = await fetchJson(`https://jojo-docsapi.herokuapp.com/api/textpro/porn-hub?apikey=Joo&text1=${args[1]}&text2=${args[2]}`)
   conn.sendMessage(from, {caption: `Succes!`, image: {url: data.result}}, {quoted: msg})
   limitAdd(sender, limit)
   break
 case prefix+'3d':
   if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  reply("Tunggu Sebentar Sedang Membuat Makernya Sekitar 1 Menit Kurang")
   var data = await fetchJson(`https://jojo-docsapi.herokuapp.com/api/textpro/3d-gradient?apikey=Joo&text=${q}`)
   conn.sendMessage(from, {caption: `Succes!`, image: {url: data.result}}, {quoted: msg})
   limitAdd(sender, limit)
   break
 case prefix+'christmas':
 if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-
+reply("Tunggu Sebentar Sedang Membuat Makernya Sekitar 1 Menit Kurang")
   var data = await fetchJson(`https://jojo-docsapi.herokuapp.com/api/textpro/christmas?apikey=Joo&text=${q}`)
   conn.sendMessage(from, {caption: `Succes!`, image: {url: data.result}}, {quoted: msg})
   limitAdd(sender, limit)
   break
+case prefix+'thunder':
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  reply("Tunggu Sebentar Sedang Membuat Makernya Sekitar 1 Menit Kurang")
+ var data = await fetchJson(`https://bx-hunter.herokuapp.com/api/textpro/thunder-text?text=JojoBot&apikey=${ikiapi}`)
+conn.sendMessage(from, {caption: `nih Dah jadi`, image: {url: data.result}}, {quoted: msg})
+limitAdd(sender, limit)
+break
 case prefix+'logowolf':
   if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-
+reply("Tunggu Sebentar Sedang Membuat Makernya Sekitar 1 Menit Kurang")
   var data = await fetchJson(`https://jojo-docsapi.herokuapp.com/api/textpro/logo-wolf2?apikey=Joo&text=${args[1]}&text2=${args[2]}`)
 
   conn.sendMessage(from, {caption: `Succes!`, image: {url: data.result}}, {quoted: msg})
@@ -1966,6 +1976,7 @@ case prefix+'logowolf':
   break
 case prefix+'logowolf2':
   if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  reply("Tunggu Sebentar Sedang Membuat Makernya Sekitar 1 Menit Kurang")
   var data = await fetchJson(`https://jojo-docsapi.herokuapp.com/api/textpro/logo-wolf ?apikey=Joo&text=${args[1]}&text2=${args[2]}`)
   conn.sendMessage(from, {caption: `Succes!`, image: {url: data.result}}, {quoted: msg})
   limitAdd(sender, limit)
@@ -1973,10 +1984,88 @@ case prefix+'logowolf2':
 case prefix+'ppcouple':
   case prefix+'ppcp':
     case prefix+'couple':
+      if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
     var data = await fetchJson(`https://melcanz.com/ppcouple?&apikey=melcantik`)
     reply("Couplean sama aku yuk")
 conn.sendMessage(from, {caption: `Cowo`, image: {url: data.cowo}}, {quoted: msg})
 conn.sendMessage(from, {caption: `Cewe`, image: {url: data.cewe}}, {quoted: msg})
+limitAdd(sender, limit)
+break
+//Punya Iki
+case prefix+'kalkulator':
+  case prefix+'k':
+    if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+    var data = await fetchJson(`https://bx-hunter.herokuapp.com/api/calculator?angka=${q}&apikey=${ikiapi}`)
+    reply(data.result)
+    limitAdd(sender, limit)
+    break
+case prefix+'maker1':
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  var data = await getBuffer(`https://bx-hunter.herokuapp.com/api/flamingtext/text3d?text=${q}&apikey=${ikiapi}`)
+reply("Tunggu Sebentar Sedang Membuat Makernya Sekitar 1 Menit Kurang")
+conn.sendMessage(from, {caption: `*${q}*`, image: data}, {quoted: msg})
+limitAdd(sender, limit)
+break
+case prefix+'maker2':
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  var data = await getBuffer(`https://bx-hunter.herokuapp.com/api/flamingtext/blackbird?text=${q}&apikey=${ikiapi}`)
+reply("Tunggu Sebentar Sedang Membuat Makernya Sekitar 1 Menit Kurang")
+conn.sendMessage(from, {caption: `*${q}*`, image: data}, {quoted: msg})
+limitAdd(sender, limit)
+case prefix+'maker3':
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  var data = await getBuffer(`https://bx-hunter.herokuapp.com/api/flamingtext/express?text=${q}&apikey=${ikiapi}`)
+reply("Tunggu Sebentar Sedang Membuat Makernya Sekitar 1 Menit Kurang")
+conn.sendMessage(from, {caption: `*${q}*`, image: data}, {quoted: msg})
+limitAdd(sender, limit)
+break
+case prefix+'maker4':
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  var data = await getBuffer(`https://bx-hunter.herokuapp.com/api/flamingtext/hbd?text=${q}&apikey=${ikiapi}`)
+reply("Tunggu Sebentar Sedang Membuat Makernya Sekitar 1 Menit Kurang")
+conn.sendMessage(from, {caption: `*${q}*`, image: data}, {quoted: msg})
+limitAdd(sender, limit)
+break
+case prefix+'maker5':
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  var data = await getBuffer(`https://bx-hunter.herokuapp.com/api/flamingtext/glow?text=${q}&apikey=${ikiapi}`)
+reply("Tunggu Sebentar Sedang Membuat Makernya Sekitar 1 Menit Kurang")
+conn.sendMessage(from, {caption: `*${q}*`, image: data}, {quoted: msg})
+limitAdd(sender, limit)
+break
+case prefix+'maker6':
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  var data = await getBuffer(`https://bx-hunter.herokuapp.com/api/flamingtext/neon?text=${q}&apikey=${ikiapi}`)
+reply("Tunggu Sebentar Sedang Membuat Makernya Sekitar 1 Menit Kurang")
+conn.sendMessage(from, {caption: `*${q}*`, image: data}, {quoted: msg})
+limitAdd(sender, limit)
+break
+case prefix+'maker7':
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  var data = await getBuffer(`https://bx-hunter.herokuapp.com/api/flamingtext/sound?text=${q}&apikey=${ikiapi}`)
+reply("Tunggu Sebentar Sedang Membuat Makernya Sekitar 1 Menit Kurang")
+conn.sendMessage(from, {caption: `*${q}*`, image: data}, {quoted: msg})
+limitAdd(sender, limit)
+break
+case prefix+'maker8':
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  var data = await getBuffer(`https://bx-hunter.herokuapp.com/api/flamingtext/cereal?text=${q}&apikey=${ikiapi}`)
+reply("Tunggu Sebentar Sedang Membuat Makernya Sekitar 1 Menit Kurang")
+conn.sendMessage(from, {caption: `*${q}*`, image: data}, {quoted: msg})
+limitAdd(sender, limit)
+break
+case prefix+'maker9':
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  var data = await getBuffer(`https://bx-hunter.herokuapp.com/api/flamingtext/fun?text=${q}&apikey=${ikiapi}`)
+  reply("Tunggu Sebentar Sedang Membuat Makernya Sekitar 1 Menit Kurang")
+conn.sendMessage(from, {caption: `*${q}*`, image: data}, {quoted: msg})
+limitAdd(sender, limit)
+break
+case prefix+'maker10':
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+  var data = await getBuffer(`https://bx-hunter.herokuapp.com/api/flamingtext/harry?text=${q}&apikey=${ikiapi}`)
+  reply("Tunggu Sebentar Sedang Membuat Makernya Sekitar 1 Menit Kurang")
+conn.sendMessage(from, {caption: `*${q}*`, image: data}, {quoted: msg})
 limitAdd(sender, limit)
 break
 			default:
