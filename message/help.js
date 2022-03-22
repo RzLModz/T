@@ -74,8 +74,10 @@ exports.allmenu = (sender, prefix, pushname, isOwner, isPremium, balance, limit,
   ≻ ${prefix}husbu
   ≻ ${prefix}yaoi
   
-  *( ⚠️ )  Nsfw Premium*
+  *( 📛 ) Nsfw User Free*
   ≻ ${prefix}hentai
+  
+  *( ⚠️ )  Premium User*
   ≻ ${prefix}ass
   ≻ ${prefix}bdsm
   ≻ ${prefix}ahegao
@@ -86,6 +88,7 @@ exports.allmenu = (sender, prefix, pushname, isOwner, isPremium, balance, limit,
   ≻ ${prefix}femdom
   ≻ ${prefix}foot
   ≻ ${prefix}gangbang
+  ≻ ${prefix}xnxx <Link>
   
   *( 🎨 )  Menu Maker*
   ≻ ${prefix}glitch <Text> <Text>

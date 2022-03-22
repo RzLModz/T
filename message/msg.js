@@ -1566,10 +1566,11 @@ var but = [{buttonId: `${command}`, buttonText: { displayText: 'Next Photo' }, t
 					conn.sendMessage(from, { caption: `Sangenya prem ini`, image: { url: data.result }, buttons: but, footer: 'Pencet tombol dibawah untuk foto selanjutnya' }, { quoted: msg })
 					break
 case prefix+'hentai':
-  if (!isPremium)return reply("Perintah Ini Khusus Pengguna Premium, Upgrade Fitur Premium Ke Owner, Ketik !owner")
+  if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
    var data = await getBuffer(`https://hardianto.xyz/api/anime/random?nsfw=hentai&apikey=${keyanto}`)
 				var but = [{buttonId: `/hentai`, buttonText: { displayText: "Kirim Hentai Lagi" }, type: 1 }]
 				conn.sendMessage(from, { caption: "Hentai For Premium", image: { url: `https://hardianto.xyz/api/anime/random?nsfw=hentai&apikey=${keyanto}` }, buttons: but, footer: 'Pencet tombol dibawah untuk foto selanjutnya' }, { quoted: msg })
+				limitAdd(sender, limit)
 				break
 ///MAKER BY HADII APII!!!!
 case prefix+'glitch':
@@ -1962,7 +1963,7 @@ reply("Tunggu Sebentar Sedang Membuat Makernya Sekitar 1 Menit Kurang")
 case prefix+'thunder':
   if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
   reply("Tunggu Sebentar Sedang Membuat Makernya Sekitar 1 Menit Kurang")
- var data = await fetchJson(`https://bx-hunter.herokuapp.com/api/textpro/thunder-text?text=JojoBot&apikey=${ikiapi}`)
+ var data = await fetchJson(`https://bx-hunter.herokuapp.com/api/textpro/thunder-text?text=${q}&apikey=${ikiapi}`)
 conn.sendMessage(from, {caption: `nih Dah jadi`, image: {url: data.result}}, {quoted: msg})
 limitAdd(sender, limit)
 break
@@ -1981,15 +1982,26 @@ case prefix+'logowolf2':
   conn.sendMessage(from, {caption: `Succes!`, image: {url: data.result}}, {quoted: msg})
   limitAdd(sender, limit)
   break
+//Amel
 case prefix+'ppcouple':
   case prefix+'ppcp':
     case prefix+'couple':
       if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-    var data = await fetchJson(`https://melcanz.com/ppcouple?&apikey=melcantik`)
+    var data = await fetchJson(`https://melcanz.com/ppcouple?&apikey=${apikey}`)
     reply("Couplean sama aku yuk")
 conn.sendMessage(from, {caption: `Cowo`, image: {url: data.cowo}}, {quoted: msg})
 conn.sendMessage(from, {caption: `Cewe`, image: {url: data.cewe}}, {quoted: msg})
 limitAdd(sender, limit)
+break
+case prefix+'xnxx':
+  case prefix+'xnxxdownload':
+if (args.length < 2) return reply(`Kirim perintah ${command} link`)
+if (!args[1].includes('xnxx')) return reply(mess.error.Iv)
+			    if (!isUrl(args[1])) return reply(mess.error.Iv)
+if (!isPremium)return reply("Perintah Ini Khusus Pengguna Premium, Upgrade Fitur Premium Ke Owner, Ketik !owner")
+var data = await fetchJson(`https://melcanz.com/xnxxdl?url=${q}&apikey=${apikey}`)
+reply(mess.wait)
+conn.sendMessage(from, {video: {url: data.result.files.high}}, {quoted: msg})
 break
 //Punya Iki
 case prefix+'kalkulator':
